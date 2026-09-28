@@ -26,18 +26,21 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+The purpose of the game is to guess a random number in the given number of attempts.
 - [ ] Detail which bugs you found.
+The hints were reversed. The Show hint button was not working. The Submit guess does not work after a new game starts.
 - [ ] Explain what fixes you applied.
+I fixed the reversed hints in check_guess function by reversing the comparison operator. I also fixed the string input for secret to the check_guess function. 
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. The user enters a guess in the "Enter your guess" box and clicks "Submit Guess" button.
+2. Game shows a hint saying "Go Lower" or "Go Higher"
+3. User enters another guess based on the hint, and the game shows the hint again "Too High"
+4. Score and the number of attempts left updates after each guess
+5. Game ends after the correct guess is entered by the user
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
@@ -45,8 +48,9 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 
 ```
 # Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+python3 -m pytest -q tests/test_game_logic.py
+....                                                                               [100%]
+4 passed in 0.01s
 ```
 
 ## 🚀 Stretch Features

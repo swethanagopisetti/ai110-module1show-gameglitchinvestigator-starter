@@ -54,5 +54,8 @@ Yes, it designed a new test test_numeric_string_secret_uses_numeric_comparison t
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+Have logic separate from UI and have test cases for every scenario.
 - What is one thing you would do differently next time you work with AI on a coding task?
+I will give more context to the AI so that it thinks and responds correctly.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+It did edge case handling very well. I liked how it did type cast to int at the beginning of the function.
