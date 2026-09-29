@@ -11,14 +11,17 @@
 **What task did you give the agent?**
 
 <!-- Describe the goal you asked the agent to accomplish -->
+Identify three potential "edge case" inputs (e.g., negative numbers, decimals, or extremely large values) that might still break the game. Generate a suite of pytest cases that verify your game handles these inputs gracefully. Fix the failing tests. 
 
 **What did the agent do?**
 
 <!-- List the steps the agent took (files edited, commands run, etc.) -->
+It listed the edge cases as negative numbers, decimals, extremely large numbers. It added a test case called test_invalid_or_out_of_range_guess_is_rejected.
 
 **What did you have to verify or fix manually?**
 
 <!-- Describe anything the agent got wrong or that required human review -->
+I did not need any fixing. I asked it to fix the failing tests and it was able to fix the failing tests. After it fixed, I ran the tests to ensure that they are all running fine.
 
 ---
 
@@ -28,9 +31,9 @@
 
 | Edge Case | Prompt Used | AI-Suggested Test | Did It Pass? | Your Reasoning |
 |-----------|-------------|-------------------|--------------|----------------|
-| | | | | |
-| | | | | |
-| | | | | |
+| Negative Numbers| Generate a suite of pytest cases that verify your game handles these inputs gracefully. | test_invalid_or_out_of_range_guess_is_rejected | Yes | |
+| Decimals| Generate a suite of pytest cases that verify your game handles these inputs gracefully. | test_invalid_or_out_of_range_guess_is_rejected | Yes | |
+| Extremely large numbers| Generate a suite of pytest cases that verify your game handles these inputs gracefully. | test_invalid_or_out_of_range_guess_is_rejected | Yes | |
 
 ---
 

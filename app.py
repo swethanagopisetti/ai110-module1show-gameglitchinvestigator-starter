@@ -20,11 +20,8 @@ def parse_guess(raw: str):
         return False, None, "Enter a guess."
 
     try:
-        if "." in raw:
-            value = int(float(raw))
-        else:
-            value = int(raw)
-    except Exception:
+        value = int(raw)
+    except ValueError:
         return False, None, "That is not a number."
 
     return True, value, None
@@ -128,14 +125,14 @@ if st.session_state.status != "playing":
     st.stop()
 
 if submit:
-    st.session_state.attempts += 1
-
     ok, guess_int, err = parse_guess(raw_guess)
 
     if not ok:
-        st.session_state.history.append(raw_guess)
         st.error(err)
+    elif not low <= guess_int <= high:
+        st.error(f"Enter a whole number between {low} and {high}.")
     else:
+        st.session_state.attempts += 1
         st.session_state.history.append(guess_int)
 
         if st.session_state.attempts % 2 == 0:

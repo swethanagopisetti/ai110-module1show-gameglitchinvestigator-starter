@@ -53,6 +53,13 @@ python3 -m pytest -q tests/test_game_logic.py
 4 passed in 0.01s
 ```
 
+
+```
+python3 -m pytest -q tests/test_game_logic.py
+.......                                                                            [100%]
+7 passed in 1.02s
+```
+
 ## 🚀 Stretch Features
 
 - [ ] [If you choose to complete Challenge 4, describe the Enhanced UI changes here — a screenshot is optional]
